@@ -2,7 +2,7 @@ Hello✨ My name is Imran
 ======================
 
 * 🌍  I'm based in Ingushetia
-* ✉️  You can contact me at [iiimestoev67@gmail.com](mailto:iiimestoev67@gmail.com)
+* ✉️  You can contact me at [iiimestoev67@gmail.com](mailto:iiimestoev67@gmail.com) and Telegram:@mantariy
 * 🧠  I'm currently learning Java and kotlin
 
 <p align="left">
