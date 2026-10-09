@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 130" width="100%" height="100%">
+  <defs>
+    <!-- Плавное круглое свечение без фильтров размытия -->
+    <radialGradient id="fairyGlowOuter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#0284c7" stop-opacity="0.25"/>
+      <stop offset="70%" stop-color="#0369a1" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Яркая сердцевина феи -->
+    <radialGradient id="fairyGlowInner" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="35%" stop-color="#e0f2fe" stop-opacity="0.95"/>
+      <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <style>
+    .zelda-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-weight: 800;
+      font-size: 38px;
+      fill: #f0f6fc;
+      text-anchor: middle;
+      opacity: 0;
+      animation: slideUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .subtitle {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      fill: #38bdf8;
+      text-anchor: middle;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: fadeIn 1.2s 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Плавное парение феи */
+    .navi {
+      animation: floatNavi 3.2s ease-in-out infinite alternate;
+      transform-origin: 220px 45px;
+    }
+
+    /* Пульсация свечения */
+    .glow-pulse {
+      animation: pulseGlow 1.8s ease-in-out infinite alternate;
+      transform-origin: 220px 45px;
+    }
+
+    /* Взмахи крыльев */
+    .wing-l {
+      animation: flapLeft 0.18s ease-in-out infinite alternate;
+      transform-origin: 218px 43px;
+    }
+    .wing-r {
+      animation: flapRight 0.18s ease-in-out infinite alternate;
+      transform-origin: 222px 43px;
+    }
+
+    /* Искорки света */
+    .sparkle1 { animation: twinkle 1.5s infinite ease-in-out; }
+    .sparkle2 { animation: twinkle 2s infinite ease-in-out 0.6s; }
+
+    @keyframes slideUp {
+      0% { opacity: 0; transform: translateY(35px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 0.9; }
+    }
+
+    @keyframes floatNavi {
+      0% { transform: translate(0, 0); }
+      50% { transform: translate(3px, -7px); }
+      100% { transform: translate(-3px, 5px); }
+    }
+
+    @keyframes pulseGlow {
+      0% { transform: scale(0.9); opacity: 0.75; }
+      100% { transform: scale(1.15); opacity: 1; }
+    }
+
+    @keyframes flapLeft {
+      0% { transform: rotate(-25deg) scaleX(1); }
+      100% { transform: rotate(-8deg) scaleX(0.5); }
+    }
+
+    @keyframes flapRight {
+      0% { transform: rotate(25deg) scaleX(1); }
+      100% { transform: rotate(8deg) scaleX(0.5); }
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.15; transform: scale(0.7); }
+      50% { opacity: 1; transform: scale(1.3); }
+    }
+  </style>
+
+  <!-- Цитата и заголовок -->
+  <text x="50%" y="32" class="subtitle">✦ "Hey, Listen!" ✦</text>
+  <text x="50%" y="82" class="zelda-title">Hello, I'm Imran 👋</text>
+
+  <!-- Нави (аккуратно над словом Hello) -->
+  <g class="navi">
+    <!-- Внешняя мягкая аура (без фильтра, чистый сферический градиент) -->
+    <circle cx="220" cy="45" r="42" fill="url(#fairyGlowOuter)" class="glow-pulse" />
+
+    <!-- Крылышки феи -->
+    <ellipse cx="210" cy="38" rx="13" ry="4.5" fill="#bae6fd" opacity="0.65" class="wing-l" />
+    <ellipse cx="230" cy="38" rx="13" ry="4.5" fill="#bae6fd" opacity="0.65" class="wing-r" />
+
+    <!-- Внутреннее яркое свечение -->
+    <circle cx="220" cy="45" r="20" fill="url(#fairyGlowInner)" />
+    <!-- Белый центр -->
+    <circle cx="220" cy="45" r="5" fill="#ffffff" />
+
+    <!-- Летающие искорки -->
+    <circle cx="195" cy="35" r="2" fill="#e0f2fe" class="sparkle1" />
+    <circle cx="242" cy="58" r="1.6" fill="#7dd3fc" class="sparkle2" />
+  </g>
+</svg>
