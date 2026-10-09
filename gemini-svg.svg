@@ -1,0 +1,56 @@
+<svg fill="none" viewBox="0 0 800 90" width="800" height="90" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 90px;
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        .title {
+          font-size: 38px;
+          font-weight: 700;
+          color: #f0f6fc;
+          opacity: 0;
+          animation: slideUpFade 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+        }
+
+        .wave {
+          display: inline-block;
+          transform-origin: 70% 70%;
+          animation: waveHand 2s 1.2s infinite ease-in-out;
+        }
+
+        @keyframes slideUpFade {
+          0% {
+            opacity: 0;
+            transform: translateY(35px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        @keyframes waveHand {
+          0%, 100% { transform: rotate(0deg); }
+          20% { transform: rotate(14deg); }
+          40% { transform: rotate(-10deg); }
+          60% { transform: rotate(14deg); }
+          80% { transform: rotate(-4deg); }
+        }
+      </style>
+      <div class="container">
+        <h1 class="title">
+          Hi there, I'm Imran <span class="wave">👋</span>
+        </h1>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
