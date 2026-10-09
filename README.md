@@ -1,4 +1,6 @@
-<h1 align="center">Hi there, I'm Imran 👋</h1>
+<p align="center">
+  <img src="./header.svg" alt="Hi there, I'm Imran" width="700" />
+</p>
 
 <p align="center">
   <b>Android / Backend Developer in learning</b> from Ingushetia 📍
