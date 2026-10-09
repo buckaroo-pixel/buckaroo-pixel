@@ -1,21 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 120" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 130" width="100%" height="100%">
   <defs>
-    <!-- Неоновое свечение Нави -->
-    <filter id="navi-glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="6" result="blur1" />
-      <feGaussianBlur stdDeviation="14" result="blur2" />
-      <feMerge>
-        <feMergeNode in="blur2" />
-        <feMergeNode in="blur1" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+    <!-- Плавное круглое свечение без фильтров размытия -->
+    <radialGradient id="fairyGlowOuter" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="40%" stop-color="#0284c7" stop-opacity="0.25"/>
+      <stop offset="70%" stop-color="#0369a1" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
 
-    <radialGradient id="fairy-core" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="45%" stop-color="#70d6ff" />
-      <stop offset="85%" stop-color="#0096c7" />
-      <stop offset="100%" stop-color="#0077b6" stop-opacity="0" />
+    <!-- Яркая сердцевина феи -->
+    <radialGradient id="fairyGlowInner" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1"/>
+      <stop offset="35%" stop-color="#e0f2fe" stop-opacity="0.95"/>
+      <stop offset="70%" stop-color="#38bdf8" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
     </radialGradient>
   </defs>
 
@@ -33,35 +31,40 @@
     .subtitle {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      fill: #70d6ff;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      fill: #38bdf8;
       text-anchor: middle;
       text-transform: uppercase;
       opacity: 0;
-      animation: fadeIn 1.2s 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation: fadeIn 1.2s 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    /* Анимация парения феи */
-    .navi-group {
-      animation: naviFloat 3s ease-in-out infinite alternate;
+    /* Плавное парение феи */
+    .navi {
+      animation: floatNavi 3.2s ease-in-out infinite alternate;
       transform-origin: 220px 45px;
     }
 
-    /* Трепетание крылышек */
-    .wing-left {
-      animation: wingFlapLeft 0.22s ease-in-out infinite alternate;
-      transform-origin: 220px 42px;
-    }
-    .wing-right {
-      animation: wingFlapRight 0.22s ease-in-out infinite alternate;
-      transform-origin: 220px 42px;
+    /* Пульсация свечения */
+    .glow-pulse {
+      animation: pulseGlow 1.8s ease-in-out infinite alternate;
+      transform-origin: 220px 45px;
     }
 
-    /* Мерцающие искры вокруг */
-    .sparkle-1 { animation: sparkle 1.6s infinite ease-in-out 0.2s; }
-    .sparkle-2 { animation: sparkle 2.1s infinite ease-in-out 0.8s; }
-    .sparkle-3 { animation: sparkle 1.8s infinite ease-in-out 1.2s; }
+    /* Взмахи крыльев */
+    .wing-l {
+      animation: flapLeft 0.18s ease-in-out infinite alternate;
+      transform-origin: 218px 43px;
+    }
+    .wing-r {
+      animation: flapRight 0.18s ease-in-out infinite alternate;
+      transform-origin: 222px 43px;
+    }
+
+    /* Искорки света */
+    .sparkle1 { animation: twinkle 1.5s infinite ease-in-out; }
+    .sparkle2 { animation: twinkle 2s infinite ease-in-out 0.6s; }
 
     @keyframes slideUp {
       0% { opacity: 0; transform: translateY(35px); }
@@ -70,57 +73,56 @@
 
     @keyframes fadeIn {
       0% { opacity: 0; }
-      100% { opacity: 0.85; }
+      100% { opacity: 0.9; }
     }
 
-    @keyframes naviFloat {
+    @keyframes floatNavi {
       0% { transform: translate(0, 0); }
-      50% { transform: translate(4px, -8px); }
-      100% { transform: translate(-3px, 4px); }
+      50% { transform: translate(3px, -7px); }
+      100% { transform: translate(-3px, 5px); }
     }
 
-    @keyframes wingFlapLeft {
-      0% { transform: rotate(0deg) scaleX(1); }
-      100% { transform: rotate(-18deg) scaleX(0.65); }
+    @keyframes pulseGlow {
+      0% { transform: scale(0.9); opacity: 0.75; }
+      100% { transform: scale(1.15); opacity: 1; }
     }
 
-    @keyframes wingFlapRight {
-      0% { transform: rotate(0deg) scaleX(1); }
-      100% { transform: rotate(18deg) scaleX(0.65); }
+    @keyframes flapLeft {
+      0% { transform: rotate(-25deg) scaleX(1); }
+      100% { transform: rotate(-8deg) scaleX(0.5); }
     }
 
-    @keyframes sparkle {
-      0%, 100% { opacity: 0.1; transform: scale(0.6); }
+    @keyframes flapRight {
+      0% { transform: rotate(25deg) scaleX(1); }
+      100% { transform: rotate(8deg) scaleX(0.5); }
+    }
+
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.15; transform: scale(0.7); }
       50% { opacity: 1; transform: scale(1.3); }
     }
   </style>
 
-  <!-- Блок с текстом (выплывает снизу) -->
-  <g>
-    <!-- Отсылка мелким шрифтом прямо над Hello -->
-    <text x="50%" y="30" class="subtitle">✦ "Hey, Listen!" ✦</text>
+  <!-- Цитата и заголовок -->
+  <text x="50%" y="32" class="subtitle">✦ "Hey, Listen!" ✦</text>
+  <text x="50%" y="82" class="zelda-title">Hello, I'm Imran 👋</text>
 
-    <!-- Основная фраза -->
-    <text x="50%" y="78" class="zelda-title">
-      Hello, I'm Imran 👋
-    </text>
-  </g>
+  <!-- Нави (аккуратно над словом Hello) -->
+  <g class="navi">
+    <!-- Внешняя мягкая аура (без фильтра, чистый сферический градиент) -->
+    <circle cx="220" cy="45" r="42" fill="url(#fairyGlowOuter)" class="glow-pulse" />
 
-  <!-- Фея Нави парит прямо над словом "Hello" -->
-  <g class="navi-group" transform="translate(25, 10)">
-    <!-- Искорки/пыльца вокруг Нави -->
-    <circle cx="215" cy="30" r="2.5" fill="#e0fbfc" class="sparkle-1" filter="url(#navi-glow)"/>
-    <circle cx="250" cy="55" r="2" fill="#70d6ff" class="sparkle-2" filter="url(#navi-glow)"/>
-    <circle cx="205" cy="65" r="1.8" fill="#ffffff" class="sparkle-3" filter="url(#navi-glow)"/>
+    <!-- Крылышки феи -->
+    <ellipse cx="210" cy="38" rx="13" ry="4.5" fill="#bae6fd" opacity="0.65" class="wing-l" />
+    <ellipse cx="230" cy="38" rx="13" ry="4.5" fill="#bae6fd" opacity="0.65" class="wing-r" />
 
-    <!-- Левое крылышко -->
-    <ellipse cx="215" cy="38" rx="14" ry="5" fill="#caf0f8" opacity="0.6" class="wing-left" transform="rotate(-30 220 45)" />
-    
-    <!-- Правое крылышко -->
-    <ellipse cx="241" cy="38" rx="14" ry="5" fill="#caf0f8" opacity="0.6" class="wing-right" transform="rotate(30 228 45)" />
+    <!-- Внутреннее яркое свечение -->
+    <circle cx="220" cy="45" r="20" fill="url(#fairyGlowInner)" />
+    <!-- Белый центр -->
+    <circle cx="220" cy="45" r="5" fill="#ffffff" />
 
-    <!-- Сияющее ядро феи -->
-    <circle cx="228" cy="46" r="16" fill="url(#fairy-core)" filter="url(#navi-glow)"/>
-    <circle cx="228" cy="46" r="6" fill="#ffffff"/>
+    <!-- Летающие искорки -->
+    <circle cx="195" cy="35" r="2" fill="#e0f2fe" class="sparkle1" />
+    <circle cx="242" cy="58" r="1.6" fill="#7dd3fc" class="sparkle2" />
   </g>
 </svg>
