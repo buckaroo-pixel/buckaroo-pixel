@@ -21,11 +21,11 @@
     "projects"
   ],
   "hero": {
-    "greeting": "Hey, listen I'm",
+    "greeting": "Hey, listen! I'm",
     "name": "",
-    "subtitle": "Hello World \"print\"",
+    "subtitle": "HelloWorld(\"print\")",
     "typing": true,
-    "avatarShape": "cookie12",
+    "avatarShape": "soft",
     "chips": [
       {
         "icon": "location_on",
@@ -68,6 +68,10 @@
           {
             "icon": "brand:githubactions",
             "label": "GitHub Actions"
+          },
+          {
+            "icon": "brand:docker",
+            "label": "Docker"
           }
         ]
       }
