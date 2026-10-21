@@ -1,20 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 220" width="100%" height="100%">
-  <!-- Скругленный фон карточки Material You -->
-  <rect x="2" y="2" width="846" height="216" rx="28" fill="#101712" stroke="#1d2c20" stroke-width="2" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 180" width="100%" height="100%">
+  <!-- Скругленный фон карточки в тон Streak -->
+  <rect width="840" height="180" rx="32" fill="#191d17" />
 
-  <!-- Заголовок карточки в стиле Expressive Profile -->
-  <g transform="translate(32, 26)">
-    <!-- Иконка в форме цветка/шестеренки -->
-    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="#34d399" opacity="0.15" />
-    <circle cx="14" cy="14" r="14" fill="#1b3823" />
-    <text x="14" y="19" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, sans-serif" font-size="14" fill="#4ade80" text-anchor="middle"></text>
-    
-    <text x="38" y="20" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, sans-serif" font-size="18" font-weight="700" fill="#f0fdf4">
-    </text>
-  </g>
-
-  <!-- Встраивание живой змейки внутрь контейнера -->
-  <g transform="translate(25, 65)">
+  <!-- Встраивание живой змейки (центрировано внутри карточки) -->
+  <g transform="translate(15, 20)">
     
   </g>
 </svg>
