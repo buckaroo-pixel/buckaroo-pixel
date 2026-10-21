@@ -16,10 +16,10 @@ for path, bg in files:
         inner = re.sub(r'<rect[^>]*width="100%"[^>]*height="100%"[^>]*/>', '', inner, count=1)
         inner = re.sub(r'<rect[^>]*class="border"[^>]*/>', '', inner)
 
-        # Расширяем холст до 870px с запасом по краям, чтобы скругления rx=32 не срезали ячейки
-        new_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 870 180" width="870" height="180">
-  <rect width="870" height="180" rx="32" fill="{bg}"/>
-  <g transform="translate(22, 22)">
+        # viewBox 870 190 дает место снизу под шкалу, x="16" центрирует влево, y="18" держит баланс
+        new_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 870 190" width="870" height="190">
+  <rect width="870" height="190" rx="32" fill="{bg}"/>
+  <g transform="translate(16, 18)">
     {inner}
   </g>
 </svg>'''
