@@ -12,17 +12,11 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/streak-dark.svg"><img src="assets/streak-light.svg" width="100%" alt="Streak"></picture>
 
-<!-- Карточка секции змейки -->
+<!-- Contribution Snake (Inside Material You Card) -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-card-dark.svg">
-  <img src="assets/snake-card-dark.svg" width="100%" alt="Contribution Timeline">
-</picture>
-
-<!-- Сама сетка анимации -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake-dark.svg?v=clean1">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake.svg?v=clean1">
-  <img alt="github contribution grid snake" src="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake.svg?v=clean1" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake-dark.svg?v=framed_final">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake.svg?v=framed_final">
+  <img alt="github contribution grid snake" src="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake-dark.svg?v=framed_final" width="100%">
 </picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/wave-dark.svg"><img src="assets/wave-light.svg" width="100%" alt=""></picture>
