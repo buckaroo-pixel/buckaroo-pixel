@@ -14,9 +14,8 @@
 
 <!-- Contribution Snake (Zelda & Material You Theme) -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake-dark.svg?v=green">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake.svg?v=green">
-  <img alt="github contribution grid snake" src="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake.svg?v=green" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-card-dark.svg?v=1">
+  <img src="assets/snake-card-dark.svg?v=1" width="100%" alt="Contribution Timeline">
 </picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/wave-dark.svg"><img src="assets/wave-light.svg" width="100%" alt=""></picture>
