@@ -16,10 +16,10 @@ for path, bg in files:
         inner = re.sub(r'<rect[^>]*width="100%"[^>]*height="100%"[^>]*/>', '', inner, count=1)
         inner = re.sub(r'<rect[^>]*class="border"[^>]*/>', '', inner)
 
-        # Сдвиг x="8" убирает вылезание справа и центрирует всю сетку внутри скруглений
-        new_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 180" width="840" height="180">
-  <rect width="840" height="180" rx="32" fill="{bg}"/>
-  <g transform="translate(8, 22)">
+        # Расширяем холст до 870px с запасом по краям, чтобы скругления rx=32 не срезали ячейки
+        new_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 870 180" width="870" height="180">
+  <rect width="870" height="180" rx="32" fill="{bg}"/>
+  <g transform="translate(22, 22)">
     {inner}
   </g>
 </svg>'''
