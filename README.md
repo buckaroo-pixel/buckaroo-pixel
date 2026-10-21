@@ -12,7 +12,12 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/streak-dark.svg"><img src="assets/streak-light.svg" width="100%" alt="Streak"></picture>
 
-<!-- Contribution Snake -->
+<!-- Contribution Snake Header & Grid -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/snake-card-dark.svg">
+  <img src="assets/snake-card-dark.svg" width="100%" alt="Contribution Snake">
+</picture>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake-dark.svg?v=final5">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake.svg?v=final5">
