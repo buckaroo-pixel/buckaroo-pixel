@@ -20,44 +20,8 @@ jobs:
         with:
           github_user_name: buckaroo-pixel
           outputs: |
-            dist/snake-raw.svg?palette=github-light&color_snake=#22c55e&color_dots=#ebedf0,#9be9a8,#40c463,#30a14e,#216e39
-            dist/snake-raw-dark.svg?palette=github-dark&color_snake=#86efac&color_dots=#121d15,#1b3823,#22c55e,#4ade80,#86efac
-
-      - name: Wrap into Material You Card
-        run: |
-          cat << 'EOF' > wrap.py
-          import re
-
-          def wrap_svg(input_file, output_file, is_dark=True):
-              with open(input_file, 'r', encoding='utf-8') as f:
-                  content = f.read()
-
-              # Извлекаем внутренности SVG
-              inner = re.sub(r'^<svg[^>]*>', '', content)
-              inner = re.sub(r'</svg>\s*$', '', inner)
-
-              bg_color = "#101712" if is_dark else "#f4fbf4"
-              border_color = "#1d2c20" if is_dark else "#dce5dc"
-              text_color = "#e2e8f0" if is_dark else "#191c19"
-
-              card = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 890 230" width="100%" height="100%">
-            <rect x="2" y="2" width="886" height="226" rx="28" fill="{bg_color}" stroke="{border_color}" stroke-width="2"/>
-            <g transform="translate(32, 24)">
-              <circle cx="12" cy="12" r="14" fill="#1b3823"/>
-              <text x="12" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" text-anchor="middle">🐍</text>
-              <text x="36" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="700" fill="{text_color}">Contribution Timeline</text>
-            </g>
-            <g transform="translate(25, 48)">
-              {inner}
-            </g>
-          </svg>'''
-              with open(output_file, 'w', encoding='utf-8') as f:
-                  f.write(card)
-
-          wrap_svg('dist/snake-raw-dark.svg', 'dist/github-contribution-grid-snake-dark.svg', is_dark=True)
-          wrap_svg('dist/snake-raw.svg', 'dist/github-contribution-grid-snake.svg', is_dark=False)
-          EOF
-          python3 wrap.py
+            dist/github-contribution-grid-snake.svg?palette=github-light&color_snake=#22c55e&color_dots=#ebedf0,#9be9a8,#40c463,#30a14e,#216e39
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#86efac&color_dots=#101712,#1b3823,#22c55e,#4ade80,#86efac
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
