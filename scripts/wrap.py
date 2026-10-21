@@ -2,11 +2,11 @@ import os
 import re
 
 files = [
-    ('dist/github-contribution-grid-snake-dark.svg', '#161e17', '#222d23', '#f0fdf4'),
-    ('dist/github-contribution-grid-snake.svg', '#f4fbf4', '#dce5dc', '#191c19')
+    ('dist/github-contribution-grid-snake-dark.svg', '#191d17', '#e1e4da', '#285020'),
+    ('dist/github-contribution-grid-snake.svg', '#f4fbf4', '#191c19', '#dce5dc')
 ]
 
-for path, bg, border, text_color in files:
+for path, bg, text_color, badge_bg in files:
     if os.path.exists(path):
         with open(path, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -14,19 +14,19 @@ for path, bg, border, text_color in files:
         inner = re.sub(r'^<svg[^>]*>', '', content, flags=re.IGNORECASE)
         inner = re.sub(r'</svg>\s*$', '', inner, flags=re.IGNORECASE)
 
-        new_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 890 235" width="100%" height="100%">
-  <!-- Карточка с точными цветами из streak-dark.svg -->
-  <rect x="2" y="2" width="886" height="231" rx="28" fill="{bg}" stroke="{border}" stroke-width="2"/>
+        new_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 214" width="840" height="214">
+  <!-- Точный фон и скругление из streak-dark.svg -->
+  <rect width="840" height="214" rx="32" fill="{bg}"/>
 
-  <!-- Заголовок секции -->
-  <g transform="translate(32, 28)">
-    <circle cx="12" cy="12" r="14" fill="#265325"/>
-    <text x="12" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13" text-anchor="middle">🐍</text>
-    <text x="36" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="17" font-weight="700" fill="{text_color}">Contribution Timeline</text>
+  <!-- Заголовок карточки -->
+  <g transform="translate(32, 24)">
+    <circle cx="16" cy="16" r="16" fill="{badge_bg}"/>
+    <text x="16" y="22" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="16" text-anchor="middle">🐍</text>
+    <text x="44" y="23" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="20" font-weight="600" fill="{text_color}">Contribution Timeline</text>
   </g>
 
   <!-- Сетка змейки -->
-  <g transform="translate(18, 55)">
+  <g transform="translate(10, 48)">
     {inner}
   </g>
 </svg>'''
