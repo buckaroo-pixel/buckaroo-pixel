@@ -24,7 +24,7 @@ jobs:
           github_user_name: buckaroo-pixel
           outputs: |
             dist/github-contribution-grid-snake.svg?palette=github-light&color_snake=#22c55e&color_dots=#ebedf0,#9be9a8,#40c463,#30a14e,#216e39
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#86efac&color_dots=#1e241c,#223321,#285020,#387c2e,#86efac
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#86efac&color_dots=#96FF59,#223321,#285020,#387c2e,#86efac
 
       - name: Fix permissions and put snake into card
         run: |
