@@ -26,8 +26,10 @@ jobs:
             dist/github-contribution-grid-snake.svg?palette=github-light&color_snake=#22c55e&color_dots=#ebedf0,#9be9a8,#40c463,#30a14e,#216e39
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#86efac&color_dots=#121d15,#1b3823,#22c55e,#4ade80,#86efac
 
-      - name: Put snake into card
-        run: python3 scripts/wrap.py
+      - name: Fix permissions and put snake into card
+        run: |
+          sudo chown -R $USER:$USER dist
+          python3 scripts/wrap.py
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
