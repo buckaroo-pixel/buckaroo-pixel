@@ -22,7 +22,7 @@ jobs:
           github_user_name: buckaroo-pixel
           outputs: |
             dist/github-contribution-grid-snake.svg
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake-dark.svg?color_snake=#86efac&color_dots=#121d15,#1b3823,#22c55e,#4ade80,#86efac
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
