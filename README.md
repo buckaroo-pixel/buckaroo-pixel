@@ -14,9 +14,9 @@
 
 <!-- Contribution Snake (Inside Card) -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake-dark.svg?v=dots_restored">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake.svg?v=dots_restored">
-  <img alt="github contribution grid snake" src="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake-dark.svg?v=dots_restored" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake-dark.svg?v=dark_dots_v2">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake.svg?v=dark_dots_v2">
+  <img alt="github contribution grid snake" src="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake-dark.svg?v=dark_dots_v2" width="100%">
 </picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/wave-dark.svg"><img src="assets/wave-light.svg" width="100%" alt=""></picture>
