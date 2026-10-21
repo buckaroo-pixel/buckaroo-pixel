@@ -21,24 +21,7 @@ jobs:
           github_user_name: buckaroo-pixel
           outputs: |
             dist/github-contribution-grid-snake.svg?palette=github-light&color_snake=#22c55e&color_dots=#ebedf0,#9be9a8,#40c463,#30a14e,#216e39
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#86efac&color_dots=#121d15,#1b3823,#22c55e,#4ade80,#86efac
-
-      - name: Add Material You Card Frame
-        run: |
-          python3 -c "
-          for path, bg, border in [
-              ('dist/github-contribution-grid-snake-dark.svg', '#101712', '#1d2c20'),
-              ('dist/github-contribution-grid-snake.svg', '#f4fbf4', '#dce5dc')
-          ]:
-              with open(path, 'r', encoding='utf-8') as f:
-                  data = f.read()
-              rect = f'<rect width=\"100%\" height=\"100%\" rx=\"28\" fill=\"{bg}\" stroke=\"{border}\" stroke-width=\"2\"/>'
-              idx = data.find('>')
-              if idx != -1:
-                  data = data[:idx+1] + rect + data[idx+1:]
-                  with open(path, 'w', encoding='utf-8') as f:
-                      f.write(data)
-          "
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#86efac&color_dots=#101712,#1b3823,#22c55e,#4ade80,#86efac
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
