@@ -12,11 +12,11 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/streak-dark.svg"><img src="assets/streak-light.svg" width="100%" alt="Streak"></picture>
 
-<!-- Contribution Snake (Inside Material You Card) -->
+<!-- Contribution Snake (Inside Card) -->
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake-dark.svg?v=framed_final">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake.svg?v=framed_final">
-  <img alt="github contribution grid snake" src="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake-dark.svg?v=framed_final" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake-dark.svg?v=wrapped1">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake.svg?v=wrapped1">
+  <img alt="github contribution grid snake" src="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake-dark.svg?v=wrapped1" width="100%">
 </picture>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/wave-dark.svg"><img src="assets/wave-light.svg" width="100%" alt=""></picture>
