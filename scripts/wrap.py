@@ -16,12 +16,10 @@ for path, bg in files:
         inner = re.sub(r'<rect[^>]*width="100%"[^>]*height="100%"[^>]*/>', '', inner, count=1)
         inner = re.sub(r'<rect[^>]*class="border"[^>]*/>', '', inner)
 
+        # Сдвиг x="8" убирает вылезание справа и центрирует всю сетку внутри скруглений
         new_svg = f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 180" width="840" height="180">
-  <!-- Чистый фон без надписей и рамок -->
   <rect width="840" height="180" rx="32" fill="{bg}"/>
-
-  <!-- Сетка змейки ровно по центру карточки -->
-  <g transform="translate(14, 22)">
+  <g transform="translate(8, 22)">
     {inner}
   </g>
 </svg>'''
