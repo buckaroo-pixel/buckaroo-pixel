@@ -15,13 +15,41 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Generate snake animation
         uses: Platane/snk@v3
         with:
           github_user_name: buckaroo-pixel
           outputs: |
             dist/github-contribution-grid-snake.svg?palette=github-light&color_snake=#22c55e&color_dots=#ebedf0,#9be9a8,#40c463,#30a14e,#216e39
-            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#86efac&color_dots=#101712,#1b3823,#22c55e,#4ade80,#86efac
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#86efac&color_dots=#121d15,#1b3823,#22c55e,#4ade80,#86efac
+
+      - name: Embed Snake into Card
+        run: |
+          python3 - << 'EOF'
+          import re
+
+          with open('dist/github-contribution-grid-snake-dark.svg', 'r', encoding='utf-8') as f:
+              raw_snake = f.read()
+
+          inner_match = re.search(r'<svg[^>]*>(.*)</svg>', raw_snake, re.DOTALL)
+          inner_content = inner_match.group(1) if inner_match else raw_snake
+
+          with open('assets/snake-card-dark.svg', 'r', encoding='utf-8') as f:
+              card = f.read()
+
+          if '<g id="snake-container"' in card:
+              combined = card.replace('</g>\n</svg>', inner_content + '\n  </g>\n</svg>')
+              if combined == card:
+                  combined = card.replace('</svg>', inner_content + '\n</g>\n</svg>')
+          else:
+              combined = card.replace('</svg>', f'<g transform="translate(18, 55)">{inner_content}</g></svg>')
+
+          with open('dist/github-contribution-grid-snake-dark.svg', 'w', encoding='utf-8') as f:
+              f.write(combined)
+          EOF
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
