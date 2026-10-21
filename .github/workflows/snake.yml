@@ -15,6 +15,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Generate snake animation
         uses: Platane/snk@v3
         with:
@@ -23,10 +26,8 @@ jobs:
             dist/github-contribution-grid-snake.svg?palette=github-light&color_snake=#22c55e&color_dots=#ebedf0,#9be9a8,#40c463,#30a14e,#216e39
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_snake=#86efac&color_dots=#121d15,#1b3823,#22c55e,#4ade80,#86efac
 
-      - name: Inject Card Frame into SVG
-        run: |
-          CARD_DARK='<rect width="100%" height="100%" rx="28" fill="#101712" stroke="#1d2c20" stroke-width="2"/><g transform="translate(30, 26)"><circle cx="12" cy="12" r="14" fill="#1b3823"/><text x="12" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13" text-anchor="middle">🐍</text><text x="36" y="17" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="16" font-weight="700" fill="#f0fdf4">Contribution Timeline</text></g>'
-          sed -i "s|<svg[^>]*>|&${CARD_DARK}|" dist/github-contribution-grid-snake-dark.svg
+      - name: Put snake into card
+        run: python3 scripts/wrap.py
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
