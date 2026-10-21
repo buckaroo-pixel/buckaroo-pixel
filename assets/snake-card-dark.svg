@@ -7,10 +7,9 @@
     <!-- Иконка в форме цветка/шестеренки -->
     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" fill="#34d399" opacity="0.15" />
     <circle cx="14" cy="14" r="14" fill="#1b3823" />
-    <text x="14" y="19" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, sans-serif" font-size="14" fill="#4ade80" text-anchor="middle">🐍</text>
+    <text x="14" y="19" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, sans-serif" font-size="14" fill="#4ade80" text-anchor="middle"></text>
     
     <text x="38" y="20" font-family="-apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, sans-serif" font-size="18" font-weight="700" fill="#f0fdf4">
-      Contribution Timeline
     </text>
   </g>
 
