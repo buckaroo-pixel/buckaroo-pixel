@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 180" width="100%" height="100%">
-  <!-- Скругленный фон карточки в тон Streak -->
-  <rect width="840" height="180" rx="32" fill="#191d17" />
-
-  <!-- Встраивание живой змейки (центрировано внутри карточки) -->
-  <g transform="translate(15, 20)">
-    
-  </g>
-</svg>

@@ -12,16 +12,9 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/streak-dark.svg"><img src="assets/streak-light.svg" width="100%" alt="Streak"></picture>
 
-<!-- Contribution Snake (Inside Card) -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake-dark.svg?v=aligned_bar_v1">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake.svg?v=aligned_bar_v1">
-  <img alt="github contribution grid snake" src="https://raw.githubusercontent.com/buckaroo-pixel/buckaroo-pixel/output/github-contribution-grid-snake-dark.svg?v=aligned_bar_v1" width="100%">
-</picture>
-
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/wave-dark.svg"><img src="assets/wave-light.svg" width="100%" alt=""></picture>
 
-<a href="https://t.me/mantariy"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-1-dark.svg"><img src="assets/button-1-light.svg" width="auto" alt="Contact me"></picture></a>&nbsp;&nbsp;<a href="https://github.com/buckaroo-pixel?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-2-dark.svg"><img src="assets/button-2-light.svg" width="auto" alt="All repositories"></picture></a>
+<a href="https://example.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-1-dark.svg"><img src="assets/button-1-light.svg" width="auto" alt="My website"></picture></a>&nbsp;&nbsp;<a href="https://github.com/buckaroo-pixel?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-2-dark.svg"><img src="assets/button-2-light.svg" width="auto" alt="All repositories"></picture></a>
 
 <a href="https://metawka.github.io/expressive-profile/?from=buckaroo-pixel"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/credit-dark.svg"><img src="assets/credit-light.svg" width="auto" alt="Made with Expressive Profile"></picture></a>
 
