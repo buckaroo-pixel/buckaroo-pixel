@@ -14,7 +14,12 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/wave-dark.svg"><img src="assets/wave-light.svg" width="100%" alt=""></picture>
 
-<a href="https://example.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-1-dark.svg"><img src="assets/button-1-light.svg" width="auto" alt="My website"></picture></a>&nbsp;&nbsp;<a href="https://github.com/buckaroo-pixel?tab=repositories"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/button-2-dark.svg"><img src="assets/button-2-light.svg" width="auto" alt="All repositories"></picture></a>
+<!-- Contribution Snake (GitHub Pages) -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://buckaroo-pixel.github.io/buckaroo-pixel/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://buckaroo-pixel.github.io/buckaroo-pixel/github-contribution-grid-snake.svg">
+  <img alt="Contribution Snake" src="https://buckaroo-pixel.github.io/buckaroo-pixel/github-contribution-grid-snake-dark.svg" width="100%">
+</picture>
 
 <a href="https://metawka.github.io/expressive-profile/?from=buckaroo-pixel"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/credit-dark.svg"><img src="assets/credit-light.svg" width="auto" alt="Made with Expressive Profile"></picture></a>
 
