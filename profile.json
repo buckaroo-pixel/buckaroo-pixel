@@ -17,7 +17,9 @@
     "wave",
     "buttons"
   ],
-  "hidden": [],
+  "hidden": [
+    "buttons"
+  ],
   "hero": {
     "greeting": "Hey, listen! I'm",
     "name": "",
