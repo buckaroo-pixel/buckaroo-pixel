@@ -1,7 +1,7 @@
 {
   "version": 1,
   "login": "buckaroo-pixel",
-  "seed": "#05BB06",
+  "seed": "#4285F4",
   "seedFromAvatar": true,
   "scheme": "monochrome",
   "motion": true,
@@ -17,15 +17,13 @@
     "wave",
     "buttons"
   ],
-  "hidden": [
-    "projects"
-  ],
+  "hidden": [],
   "hero": {
     "greeting": "Hey, listen! I'm",
     "name": "",
     "subtitle": "HelloWorld(\"print\")",
     "typing": true,
-    "avatarShape": "soft",
+    "avatarShape": "pill",
     "chips": [
       {
         "icon": "location_on",
