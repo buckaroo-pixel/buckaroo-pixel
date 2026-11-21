@@ -1,5 +1,5 @@
 {
- "key": "51e9730",
+ "key": "cdc5948f",
  "stars": 0,
  "contributions": 111,
  "repos": 15,
@@ -130,9 +130,13 @@
    {
     "c": 0,
     "day": 20,
-    "today": true
+    "today": false
    },
-   null
+   {
+    "c": 0,
+    "day": 21,
+    "today": true
+   }
   ]
  ],
  "streak": {
